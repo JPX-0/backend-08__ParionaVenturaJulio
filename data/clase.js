@@ -26,7 +26,7 @@ class Contenedor {
     const findId = products.map(item => item.id); // Obtine todos los ID del array.
     let newId; // Guarda el nuevo ID
     if(findId.length == 0) newId = 1; // Se asegura en guardar un 1 si está vacío el array.
-    else newId = Math.max.apply(null, findId) + 1; // Busca máximo ID y aumenta en 1.
+    else newId = Math.max.apply(null, findId) + 1; // Busca el máximo ID y aumenta en 1.
     const newProduct = {
       id: newId,
       title,
