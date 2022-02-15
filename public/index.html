@@ -69,36 +69,33 @@
       </div>
     </nav>
     <!-- Products Form -->
-    <div style="display: flex; flex-direction: column; align-items: center;">
-      <div><h3 style="text-align: center; margin-top: 16px;"> Agrega un producto! </h3></div>
-      <form action="/api/products" method="post">
-        <div style="margin-bottom: 16px;">
-          <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
-            <label for="nombre"> Nombre: </label>
-            <br>
-            <input type="text" name="title" id="nombre" style="margin-bottom: 16px;" class="input-file">
-          </div>
-          <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
-            <label for="descripcion"> Description: </label>
-            <br>
-            <textarea name="description" id="descripcion" cols="30" rows="10" style="margin-bottom: 16px;" class="input-file"></textarea>
-          </div>
-          <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
-            <label for="precio"> Precio: </label>
-            <br>
-            <input type="number" name="price" id="precio" style="margin-bottom: 16px;" step=".01" class="input-file">
-          </div>
-          <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
-            <label for="imagen"> URL Imagen: </label>
-            <br>
-            <input type="text" name="thumbnail" id="imagen" style="margin-bottom: 16px;" class="input-file">
-          </div>
-          <div style="display: flex; justify-content: center; align-items: center;">
-            <input type="submit" value="Crear producto" class="submit-button">
-          </div>
-        </div>
-      </form>
-    </div>
+    <main>
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <div><h3 style="text-align: center; margin-top: 16px;"> Escoja la accón que desea realizar </h3></div>
+        <button class="submit-button" id="page-getall">Ver todos los productos</button>
+        <button class="submit-button" id="page-getone">Busca un producto</button>
+        <button class="submit-button" id="page-save">Agrega un producto</button>
+        <button class="submit-button" id="page-update">Actualiza un producto (not functional)</button>
+        <button class="submit-button" id="page-delete">Elimina un producto (not functional)</button>
+      </div>
+  
+      <!-- rendered pages -->
+      <section id="main"></section>
+    </main>
+
+    <!-- templates -->
+    <template id="update-template">
+      <div style="display: flex; align-items: center; padding: 0.5rem; gap: 0.2rem;">
+        <label></label>
+        <input type="radio" class="submit-button" name="update">
+      </div>
+    </template>
+    <template id="delete-template">
+      <div style="display: flex; align-items: center; padding: 0.5rem; gap: 0.2rem;">
+        <input type="submit" class="submit-button" name="delete">
+      </div>
+    </template>
+
     <!-- javascript -->
     <script src="./browser-app.js"></script>
   </body>

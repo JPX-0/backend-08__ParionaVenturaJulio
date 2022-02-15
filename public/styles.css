@@ -103,11 +103,8 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
+  color: var(--clr-grey-1);
 }
-/* input[type="file"] {
-  display: none;
-} */
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -133,25 +130,26 @@ p {
 }
 /*  global classes */
 
-/* section */
+/* main */
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .section {
   padding: 5rem 0;
 }
-
 .section-center {
   width: 90vw;
   margin: 0 auto;
   max-width: 1170px;
 }
+
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
   }
-}
-main {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
 }
 
 /*

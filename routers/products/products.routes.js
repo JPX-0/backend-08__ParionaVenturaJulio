@@ -1,9 +1,7 @@
 const express = require(`express`);
-const Contenedor = require(`../../data/clase`);
+const products = require(`../../clase`);
 
 const router = express.Router();
-
-const products = new Contenedor();
 
 router.get(`/`, (req, res) => {
   products.getAll(req, res); // Obtine todos los productos.

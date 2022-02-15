@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 8080;
 app.use(express.static(`public`));
 
 // Routes
-app.use(`/api`, apiRoutes)
+app.use(`/api`, apiRoutes);
 
 const connectedServer = app.listen(PORT, ()=> {
   console.log(`Conexión al puerto ${PORT}`);
