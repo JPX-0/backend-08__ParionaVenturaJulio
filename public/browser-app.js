@@ -13,7 +13,7 @@ const clearFile = (type) => {
 // ----- ↓
 const fetchData = async () => {
   try {
-    const res = await fetch(`https://clase-08-parionaventurajuliocesar.glitch.me/api/products`); // Obtiene la data desde la API.
+    const res = await fetch(`https://clase-08--parionaventurajuliocesar.glitch.me/api/products`); // Obtiene la data desde la API.
     const data = await res.json(); // Parsea la data.
     renderPage(data.result) // Renderiza las secciones dinamicamnte.
   } catch (error) {
